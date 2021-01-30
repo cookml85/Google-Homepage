@@ -1,6 +1,30 @@
-.navbar{}
+.navbar{
+    display: grid;
+    grid-template-columns: 50px 50px 1fr 50px 50px 50px 50px;
+    grid-template-areas:
+    "about store . gmail images menu signin";
+}
 
+#about {
+    grid-area: about;
+ }
+ #store { 
+     grid-area: store;
+ }
+ #gmail { 
+     grid-area: gmail;
+ }
+ #images { 
+     grid-area: images;
+}
+ #menu { 
+     menu;
+}
+ #signin { 
+     grid-area: signin;
+}
 
+a {text-decoration: none; color: rgb(34, 32, 32)}
 
 .main{}
 
