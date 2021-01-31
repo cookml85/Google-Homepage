@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+    min-height: 100%,
+}
 .navbar{
     display: grid;
     grid-template-columns: 50px 50px 1fr 50px 50px 50px 50px;
@@ -26,8 +30,66 @@
 
 a {text-decoration: none; color: rgb(34, 32, 32)}
 
-.main{}
+.main { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 70px 70px 200px;
+    grid-template-areas: 
+    ". logo ."
+    ". search ."
+    ". flexbox ."
+    ". . .";   
+}
+
+ #logo {
+    grid-area: logo;
+    align-self: end;
+    justify-self: center;
+    
+ }
+ #search {
+     grid-area: search;
+     border: 1px solid rgb(34, 32, 32);
+     border-radius: 45px;
+     height: 35px;
+     justify-self: bottom;
+     align-self: center;
+    
+ }
+ 
+ #flexbox {
+     display: flexbox;
+     grid-area: flexbox;
+     align-self: center;
+     justify-self: center;
+ }
 
 
 
-.footer{}
+.footer{
+    display: grid;
+    grid-template-columns: 50x 50px 80px 1fr 50px 50px;
+    grid-template-rows: 20px;
+    grid-template-areas:
+    "advertising business howsearchworks . privacy terms settings";
+}
+
+#advertising{
+    grid-area: advertising;
+
+}
+#business {
+    grid-area: business;
+}
+#howsearchworks {
+    grid-area: howsearchworks;
+}
+#privacy {
+    grid-area: privacy;
+}
+#terms {
+    grid-area: terms;
+}
+#settings { 
+    grid-area: settings;
+}
