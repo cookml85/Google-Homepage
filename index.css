@@ -5,6 +5,7 @@ html {
 .navbar{
     display: grid;
     grid-template-columns: 50px 50px 1fr 50px 50px 50px 50px;
+    grid-template-rows: 30px;
     grid-template-areas:
     "about store . gmail images menu signin";
 }
@@ -26,7 +27,11 @@ html {
 }
  #signin { 
      grid-area: signin;
+     justify-self: center;
+     align-self: top;
 }
+
+
 
 a {text-decoration: none; color: rgb(34, 32, 32)}
 
@@ -45,51 +50,80 @@ a {text-decoration: none; color: rgb(34, 32, 32)}
     grid-area: logo;
     align-self: end;
     justify-self: center;
-    
  }
  #search {
      grid-area: search;
-     border: 1px solid rgb(34, 32, 32);
+     border: 1px solid rgb(83, 80, 80);
      border-radius: 45px;
      height: 35px;
+     width: 100%;
      justify-self: bottom;
      align-self: center;
-    
- }
- 
+    }
+
+ #search:hover {
+box-shadow: 1px 1px 5px rgb(151, 149, 149);
+}
  #flexbox {
-     display: flexbox;
+     display: flex;
      grid-area: flexbox;
      align-self: center;
      justify-self: center;
- }
+     height: 40px;
+     border: none;
+     }
+#flexbox:hover{
+    box-shadow: 1px 1px 5px rgb(151, 149, 149);
+}
+#google-search-btn{
+    margin-right: 25px;
+}
+ #lucky-button{
+    margin-left: 25px;
+}
 
 
 
 .footer{
     display: grid;
-    grid-template-columns: 50x 50px 80px 1fr 50px 50px;
-    grid-template-rows: 20px;
+    background-color: lightgrey;
+    grid-template-columns:50x 50px 50px 1fr 50px 50px;
+    grid-template-rows: 65px;
     grid-template-areas:
-    "advertising business howsearchworks . privacy terms settings";
+    "advertising business howsearchworks text privacy terms settings";
 }
 
 #advertising{
     grid-area: advertising;
+    align-self: center;
+    justify-self: left;
 
 }
 #business {
     grid-area: business;
+    align-self: center;
+    justify-self: left;
 }
 #howsearchworks {
     grid-area: howsearchworks;
+    align-self: center;
+    justify-self: left;
+}
+#text {
+    grid-area: text;
 }
 #privacy {
     grid-area: privacy;
+    align-self: center;
+    justify-self: right;
 }
 #terms {
     grid-area: terms;
+    align-self: center;
+    justify-self: right;
 }
 #settings { 
     grid-area: settings;
+    align-self: center;
+    justify-self: right;
 }
